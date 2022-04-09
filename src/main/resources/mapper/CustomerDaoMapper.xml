@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bgl.produce.dao.CustomerDao">
+
+    <select id="selectAllCustomers" resultType="com.bgl.produce.bean.Customer">
+        select id,name,telephone
+        from customer;
+    </select>
+</mapper>

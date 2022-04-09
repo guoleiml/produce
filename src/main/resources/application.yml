@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/genexspace_plugin_hintp?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: bgl0929
+  security:
+    user:
+      name: baiguolei
+      password: 123456
+      roles: admin
+  #  web:
+#    resources:
+#      static-locations: classpath:/static/,classpath:/templates/
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/,classpath:/templates/
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.bgl.produce.bean
